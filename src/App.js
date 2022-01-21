@@ -5,7 +5,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/login&signup/login";
 import SignUp from "./components/login&signup/signup";
-import loginSideViwe from "./components/login&signup/loginSideViwe"
+import loginSideViwe from "./components/login&signup/LoginSideViwe"
+import chooseSignUp from "./components/login&signup/chooseSignUp"
+import CustomerRegistation from "./components/login&signup/CustomerRegistation"
+import SellerRegistation from "./components/login&signup/SellerRegistation"
 
 function App() {
   return (<Router>
@@ -35,8 +38,10 @@ function App() {
               <Switch>
                 <Route exact path='/' component={Login} />
                 <Route path="/sign-in" component={Login} />
-                
-                <Route path="/sign-up" component={SignUp} />
+                <Route path="/sign-up-#" component={SignUp} />
+                <Route path="/sign-up" component={chooseSignUp} />
+                <Route path="/cus-Registation" component={CustomerRegistation}/>
+                <Route path='/sell-Registation' component={SellerRegistation}/>
               </Switch>
             </div>
           </div>
